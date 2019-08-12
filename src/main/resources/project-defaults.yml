@@ -1,0 +1,10 @@
+thorntail:
+  datasources:
+    data-sources:
+      appDS:
+        driver-name: postgresql
+        connection-url: jdbc:postgresql://localhost:5432/thorntaildb
+        user-name: postgres
+        password: P@ssword
+  test:
+    chave: valor
