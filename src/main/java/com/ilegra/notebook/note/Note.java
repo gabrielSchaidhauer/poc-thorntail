@@ -1,11 +1,10 @@
 package com.ilegra.notebook.note;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import javax.persistence.*;
 import java.util.UUID;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @Table(name = "note", schema = "poc")
 public class Note {
