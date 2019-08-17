@@ -19,6 +19,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <flyway.configFiles>src/main/resources/flyway.conf</flyway.configFiles>
     </properties>
 
 
@@ -81,6 +83,19 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>${version.postgresql}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
