@@ -21,6 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <flyway.configFiles>src/main/resources/flyway.conf</flyway.configFiles>
+        <liquibase.configFile>src/main/resources/liquibase.properties</liquibase.configFile>
     </properties>
 
 
@@ -96,6 +97,15 @@
                         <version>${version.postgresql}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.0.5</version>
+                <configuration>
+                    <propertyFile>${liquibase.configFile}</propertyFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>
